@@ -2,6 +2,12 @@
 A Wacom Bamboo Pen Tablet Settings UI
 
 
+[ Videos / Sites Showing The UI In Action  ]
+-
+
+https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
+
+
 [ Things To Install Before Running ]
 -
 Arch Linux = sudo pacman -S libwacom xf86-input-wacom
