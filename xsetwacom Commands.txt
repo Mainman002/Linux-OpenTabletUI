@@ -86,9 +86,9 @@ xsetwacom set 14 Button 2 3          # (0 = Nothing?, 1 = Left Click, 2 = Right 
  ASCIIKEY: (usual characters the key produces, e.g. a,b,c,1,2,3 etc.)
 
  xsetwacom set 14 Button 2 2 # right mouse button
- xsetwacom set 14 Button 2 "key +ctrl z -ctrl"
- xsetwacom get 14 Button 2 "key +Control_L +z -z -Control_L"
- xsetwacom set 14 Button 2 "key +shift button 1 key -shift"
+ xsetwacom set 14 Button 2 key ctrl z
+ xsetwacom get 14 Button 2 key Control_L z
+ xsetwacom set 14 Button 2 key shift button 1
 
 
 
