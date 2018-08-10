@@ -23,6 +23,17 @@ also make sure to restart after installing so your tablet can be recognised by t
 
 https://downloads.tuxfamily.org/godotengine/2.1.3/
 
+[ Version Download Links ]
+-
+
+[ 32bit Export ]
+-
+https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_32bit.zip
+
+[ 64bit Export ]
+-
+https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_64bit.zip
+
 [ Helpful Links ]
 -
 
