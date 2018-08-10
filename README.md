@@ -5,6 +5,7 @@ A Wacom Bamboo Pen Tablet Settings UI
 [ Videos / Sites Showing The UI In Action  ]
 -
 
+( First Video for the godot bamboo pen settings ui version )
 https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
 
 
