@@ -2,6 +2,9 @@
 A Wacom Bamboo Pen Tablet Settings UI for Linux
 
 
+( Screenshots are at the bottom of this Readme file )
+
+
 [ Videos / Sites Showing The UI In Action  ]
 -
 
