@@ -9,3 +9,6 @@ Ubuntu / Debian = sudo apt install libwacom xf86-input-wacom
 
 also make sure to restart after installing so your tablet can be recognised by the ui
 
+( currently this is using Godot 2.1.3 stable )
+
+https://downloads.tuxfamily.org/godotengine/2.1.3/
