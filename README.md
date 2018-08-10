@@ -71,7 +71,7 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 [ Stuff I Want / Need For The Future ]
 -
-[ ] improve perforamcne and reduce cpu / ram usage by upgrading from godot to javascrip, C, C++, etc
+[ ] improve perforamcne and reduce cpu / ram usage by upgrading from godot to electron, javascript, C, C++, etc
 
 [ ] add monitor draggable box for faster visual aid on viweport cursor limits
 
