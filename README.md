@@ -1,5 +1,5 @@
 # Wacom-Bamboo-Settings-Gui
-A Wacom Bamboo Pen Tablet Settings UI
+A Wacom Bamboo Pen Tablet Settings UI for Linux
 
 
 [ Videos / Sites Showing The UI In Action  ]
@@ -21,6 +21,10 @@ also make sure to restart after installing so your tablet can be recognised by t
 
 https://downloads.tuxfamily.org/godotengine/2.1.3/
 
+[ Helpful Links ]
+-
+
+(a list of wacom commands I found to be useful) https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/xsetwacom%20Commands.txt
 
 [ Finished Features ]
 -
