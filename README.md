@@ -55,6 +55,10 @@ https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-2:-Exam
 -
 https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
+(Bamboo Pen And Touch)
+-
+https://ubuntuforums.org/showthread.php?t=1515562
+
 [ Finished Features ]
 -
 [x] a tabbed based ui menu including [ Setup, Pen_Settings, Tablet_Settings, Monitor_Settings, Credits ]
