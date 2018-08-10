@@ -73,11 +73,11 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 -
 [ ] improve perforamcne and reduce cpu / ram usage by upgrading from godot to electron, javascript, C, C++, etc
 
-[ ] add monitor draggable box for faster visual aid on viweport cursor limits
+[ ] monitor draggable box for faster visual aid on viweport cursor limits
 
-[ ] add tablet draggable box for fast and easy limits for pen locations on the tablet surface
+[ ] tablet draggable box for fast and easy limits for pen locations on the tablet surface
 
-[ ] add profile settings for fast switchable preferances
+[ ] profile settings for fast switchable preferances
 
 [ ] xfce, gnome, kde panel icon right clicking would show a list of features including
 
@@ -85,9 +85,9 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 [ ] either add more tablet compatibility or make other standalone versions to reduce bloat
 
-[ ] add express key menu and ability to show / hide the settings ui with a key command 
+[ ] express key menu and ability to show / hide the settings ui with a key command 
 
-[ ] 
+[ ] color theme switch feature
 
 [ ]
 
