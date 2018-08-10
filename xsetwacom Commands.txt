@@ -1,0 +1,157 @@
+[ Things To Install Before Running ]
+[ Arch Linux = sudo -S libwacom xf86-input-wacom]
+[ Ubuntu / Debian = sudo apt install libwacom xf86-input-wacom ]
+
+[ vars ]
+PenID = 14 ##(will need to change based on device)
+
+TabletAreaStartY = 0       ##(Tablet Height Begining)
+TabletAreaEndY = 9200      ##(Tablet Height Ending)
+
+TabletAreaStartX = 0       ##(Tablet Width Begining)
+TabletAreaEndX = 14720     ##(Tablet Width Ending)
+
+MonitorAreaStartY = 0       ##(Monitor Height Begining)
+MonitorAreaEndY = 9200      ##(Monitor Height Ending)
+
+MonitorAreaStartX = 0       ##(Monitor Width Begining)
+MonitorAreaEndX = 14720     ##(Monitor Width Ending)
+
+PenDrawMode = "Absolute"          ##(Pen Draws Like a Mouse or Pen) which might be "Absolute" or "Relative"
+PenSupress = 4
+PenThreshold = 27
+PenPressureCurve = 0 0 100 100    ##(Pen Pressure Curve Lol)
+PenBtn1 = 3                       ##(Sets Button1 to Middle Click)
+PenBtn2 = 2                       ##(Sets Button2 to Right Click)
+
+[ Get Dual Monitor Info ]
+xrandr
+
+
+[ Get Tablet Devices ]
+xsetwacom list devices
+
+
+[ Get Tablet Area ]
+xsetwacom get 14 Area
+
+
+[ Set Tablet Area ]
+xsetwacom set 14 Area 0 0 14720 9200
+
+
+[ Reset Tablet Area ]
+xsetwacom set 14 ResetArea
+
+
+[ Laptop Screen Resolution ]
+xsetwacom set 14 MapToOutput 1920x1080+0+0
+
+
+[ Set Monitor To ]
+xsetwacom set 14 MapToOutput "VGA-0"
+
+WIDTH is screen_height * tablet_width / tablet_height, and
+HEIGHT is the height of the screen resolution
+
+[ Set Pen Drawing Mode ]
+xsetwacom set 14 Mode Absolute
+
+[ Set Pen Suppress ]
+xsetwacom set 14 Suppress 2
+
+[ Set Pen Raw Samples ]
+xsetwacom set 14 RawSample 4
+
+[ Set Pen Threshold ]
+xsetwacom set 14 Threshold 27
+
+[ Set Pen Pressure ]
+xsetwacom set 14 PressureCurve 0 0 100 100
+
+[ Reset Pen Button 1 T Middle Click ]
+xsetwacom set 14 Button 2 3          # (0 = Nothing?, 1 = Left Click, 2 = Right Click, 3 = Middle Click) on a second note don't change 1, it's the pen tip
+
+
+
+
+
+
+
+[ Key Mod Examples ]
+
+ MODIFIER: (each can be prefix with an l or an r for the left/right modifier (no prefix = left)
+    ctrl=ctl=control, meta, alt, shift, super, hyper
+ SPECIALKEY: f1-f35, esc=Esc, up,down,left,right, backspace=Backspace, tab, PgUp,PgDn
+ ASCIIKEY: (usual characters the key produces, e.g. a,b,c,1,2,3 etc.)
+
+ xsetwacom set 14 Button 2 2 # right mouse button
+ xsetwacom set 14 Button 2 "key +ctrl z -ctrl"
+ xsetwacom get 14 Button 2 "key +Control_L +z -z -Control_L"
+ xsetwacom set 14 Button 2 "key +shift button 1 key -shift"
+
+
+
+
+
+
+
+[ Random Parameters ]
+xsetwacom list parameters
+
+{
+Area             - Valid tablet area in device coordinates. 
+Button           - X11 event to which the given button should be mapped. 
+ToolDebugLevel   - Level of debugging trace for individual tools (default is 0 [off]). 
+TabletDebugLevel - Level of debugging statements applied to shared code paths between all tools associated with the same tablet (default is 0 [off]). 
+Suppress         - Number of points trimmed (default is 2). 
+RawSample        - Number of raw data used to filter the points (default is 4). 
+PressureCurve    - Bezier curve for pressure (default is 0 0 100 100 [linear]). 
+Mode             - Switches cursor movement mode (default is absolute). 
+TabletPCButton   - Turns on/off Tablet PC buttons (default is off for regular tablets, on for Tablet PC). 
+Touch            - Turns on/off Touch events (default is on). 
+HWTouchSwitchState - Touch events turned on/off by hardware switch. 
+Gesture          - Turns on/off multi-touch gesture events (default is on). 
+ZoomDistance     - Minimum distance for a zoom gesture (default is 50). 
+ScrollDistance   - Minimum motion before sending a scroll gesture (default is 20). 
+TapTime          - Minimum time between taps for a right click (default is 250). 
+CursorProximity  - Sets cursor distance for proximity-out in distance from the tablet (default is 10 for Intuos series, 42 for Graphire series). 
+Rotate           - Sets the rotation of the tablet. Values = none, cw, ccw, half (default is none). 
+RelWheelUp       - X11 event to which relative wheel up should be mapped. 
+RelWheelDown     - X11 event to which relative wheel down should be mapped. 
+AbsWheelUp       - X11 event to which absolute wheel up should be mapped. 
+AbsWheelDown     - X11 event to which absolute wheel down should be mapped. 
+AbsWheel2Up      - X11 event to which absolute wheel up should be mapped. 
+AbsWheel2Down    - X11 event to which absolute wheel down should be mapped. 
+StripLeftUp      - X11 event to which left strip up should be mapped. 
+StripLeftDown    - X11 event to which left strip down should be mapped. 
+StripRightUp     - X11 event to which right strip up should be mapped. 
+StripRightDown   - X11 event to which right strip down should be mapped. 
+Threshold        - Sets tip/eraser pressure threshold (default is 27). 
+ResetArea        - Resets the bounding coordinates to default in tablet units. 
+ToolType         - Returns the tool type of the associated device. 
+ToolSerial       - Returns the serial number of the current device in proximity.
+ToolID           - Returns the tool ID of the current tool in proximity.
+ToolSerialPrevious - Returns the serial number of the previous device in proximity.
+BindToSerial     - Binds this device to the serial number.
+TabletID         - Returns the tablet ID of the associated device. 
+PressureRecalibration - Turns on/off Tablet pressure recalibration
+PanScrollThreshold - Adjusts distance required for pan actions to generate a scroll event
+MapToOutput      - Map the device to the given output. 
+all              - Get value for all parameters. 
+}
+
+
+[ Useful Web Links ]
+
+[ Arch Wiki ]
+https://wiki.archlinux.org/index.php/wacom_tablet
+
+[ Tablet Configuration 1 ]
+https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-1:-xsetwacom-and-xorg.conf
+
+[ Tablet Button Example Scripts ]
+https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-2:-Example-scripts
+
+
+
