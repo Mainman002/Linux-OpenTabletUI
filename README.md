@@ -29,15 +29,19 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 (a list of wacom commands I found to be useful) https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/xsetwacom%20Commands.txt
 
 (Arch Wiki)
+-
 https://wiki.archlinux.org/index.php/wacom_tablet
 
 (Tablet Configuration 1)
+-
 https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-1:-xsetwacom-and-xorg.conf
 
 (Tablet Button Example Scripts)
+-
 https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-2:-Example-scripts
 
 (Possibly Useful Later Huion Tablet Setup Video)
+-
 https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 [ Finished Features ]
