@@ -29,13 +29,13 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 [x] a help window that displays possible button strings to help with changeing the pen button mapping 
 
-[x] ability to change pen mode between Absolute (Pen Mode) and Relative (Mouse Mode)
+[x] change pen mode between Absolute (Pen Mode) and Relative (Mouse Mode)
 
-[x] the ability to change tablet orientation right handded (none), left handded (half), vertical up (cw), and vertical down (ccw)
+[x] change tablet orientation right handded (none), left handded (half), vertical up (cw), and vertical down (ccw)
 
 [x] detect monitor resolutions and display that to a text label
 
-[x] ability to set monitor bounds for the pen cursor
+[x] set monitor bounds for the pen cursor
 
 [x] credits menu holding Jose VC and Johnathan Mueller
 
