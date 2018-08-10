@@ -75,3 +75,5 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 [ ]
 
+
+![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/Project%20Files/Assets/Sprites/Icons/Bamboo1.png)
