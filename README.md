@@ -1,6 +1,7 @@
 # Wacom-Bamboo-Settings-Gui
 A Wacom Bamboo Pen Tablet Settings UI
 
+
 [ Things To Install Before Running ]
 
 Arch Linux = sudo pacman -S libwacom xf86-input-wacom
@@ -14,7 +15,40 @@ also make sure to restart after installing so your tablet can be recognised by t
 https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 
-[ Stuff I want / need for the future ]
+[ Finished Features ]
+
+[x] a tabbed based ui menu including [ Setup, Pen_Settings, Tablet_Settings, Monitor_Settings, Credits ]
+
+[x] get tablet info and display that to a text label
+
+[x] allow users to change device id number to match their stylus
+
+[x] Pen Pressure Slider controlling the 3rd number in the curve string
+
+[x] Pen button mapping for the 2 side buttons
+
+[x] a help window that displays possible button strings to help with changeing the pen button mapping 
+
+[x] ability to change pen mode between Absolute (Pen Mode) and Relative (Mouse Mode)
+
+[x] the ability to change tablet orientation right handded (none), left handded (half), vertical up (cw), and vertical down (ccw)
+
+[x] detect monitor resolutions and display that to a text label
+
+[x] ability to set monitor bounds for the pen cursor
+
+[x] credits menu holding Jose VC and Johnathan Mueller
+
+[x]
+
+[x]
+
+[x]
+
+[x]
+
+
+[ Stuff I Want / Need For The Future ]
 
 [ ] improve perforamcne and reduce cpu / ram usage by upgrading from godot to javascrip, C, C++, etc
 
