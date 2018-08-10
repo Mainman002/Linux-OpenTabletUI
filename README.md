@@ -69,9 +69,9 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 [ ] either add more tablet compatibility or make other standalone versions to reduce bloat
 
-[ ] 
+[ ] add express key menu and ability to show / hide the settings ui with a key command 
 
-[ ]
+[ ] 
 
 [ ]
 
