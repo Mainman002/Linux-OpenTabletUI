@@ -96,7 +96,7 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 ![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/ScreenShots/1.png)
 
-![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/ScreenShots/2.png)
+![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/commit/83a7e242871e75c05eb4b65f1a4a6af84e9871d4#diff-8da5c96ad9a77e3286ea619a95546e00)
 
 ![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/ScreenShots/3.png)
 
