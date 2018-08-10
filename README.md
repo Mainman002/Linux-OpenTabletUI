@@ -28,7 +28,9 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 (disable tablet, pen pressure slider, show settings gui, quit program)
 
-[]
+[] either add more tablet compatibility or make other standalone versions to reduce bloat
+
+[] 
 
 []
 
