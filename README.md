@@ -39,14 +39,6 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 [x] credits menu holding Jose VC and Johnathan Mueller
 
-[x]
-
-[x]
-
-[x]
-
-[x]
-
 
 [ Stuff I Want / Need For The Future ]
 
