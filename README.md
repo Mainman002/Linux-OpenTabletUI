@@ -100,7 +100,7 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 [ ] color theme switch feature
 
-[ ]
+[ ] gui pen pressure visual feedback bar meter
 
 [ ]
 
