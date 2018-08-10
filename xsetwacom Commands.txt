@@ -153,7 +153,7 @@ https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-1:-xset
 [ Tablet Button Example Scripts ]
 https://github.com/linuxwacom/xf86-input-wacom/wiki/Tablet-Configuration-2:-Example-scripts
 
-[ possibly useful later Huion Tablet setup video ]
+[ Possibly Useful Later Huion Tablet Setup Video ]
 https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 
 
