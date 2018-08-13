@@ -106,6 +106,8 @@ https://ubuntuforums.org/showthread.php?t=1515562
 
 [ ] gui pen pressure visual feedback bar meter
 
+[ ] setup express keys to launch programs
+
 [ ]
 
 
