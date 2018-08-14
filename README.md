@@ -13,7 +13,9 @@ https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
 
 [ Things To Install Before Running ]
 -
-Arch Linux = sudo pacman -S libwacom xf86-input-wacom && yaourt -S digimend-kernel-drivers-dkms-git
+Arch Linux = sudo pacman -S libwacom xf86-input-wacom
+
+(might need " digimend-kernel-drivers-dkms-git " for huion tablets)
 
 Ubuntu / Debian = sudo apt install libwacom xf86-input-wacom
 
