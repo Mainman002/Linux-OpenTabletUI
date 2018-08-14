@@ -59,6 +59,10 @@ https://www.youtube.com/watch?v=ymZaexs3rac&t=0s
 -
 https://ubuntuforums.org/showthread.php?t=1515562
 
+(linux driver workaround for Huion H950p)
+-
+https://github.com/mhdchehade/pinspiroy-950
+
 [ Finished Features ]
 -
 [x] a tabbed based ui menu including [ Setup, Pen_Settings, Tablet_Settings, Monitor_Settings, Credits ]
