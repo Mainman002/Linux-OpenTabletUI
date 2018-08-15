@@ -13,11 +13,9 @@ https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
 
 [ Things To Install Before Running ]
 -
-Arch Linux = sudo pacman -S libwacom xf86-input-wacom
+libwacom xf86-input-wacom 
 
-(might need " digimend-kernel-drivers-dkms-git and linux-headers " for huion tablets)
-
-Ubuntu / Debian = sudo apt install libwacom xf86-input-wacom
+(huion tablets will need as well " digimend-kernel-drivers-dkms-git and linux-headers ")
 
 also make sure to restart after installing so your tablet can be recognised by the ui
 
@@ -64,6 +62,10 @@ https://ubuntuforums.org/showthread.php?t=1515562
 (linux driver workaround for Huion H950p)
 -
 https://github.com/mhdchehade/pinspiroy-950
+
+(tips on installing linux headers)
+-
+https://bbs.archlinux.org/viewtopic.php?id=210378
 
 [ Finished Features ]
 -
