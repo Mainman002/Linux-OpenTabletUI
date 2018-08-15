@@ -28,7 +28,7 @@ func _ready():
 	var TempCommand = str("xsetwacom set", " ", Global.PenID, " MapToOutput ", monitorP4Val, "x", monitorP3Val, "+", monitorP2Val, "+", monitorP1Val)
 	OS.execute('/bin/sh', ['-c', TempCommand], true, output)
 #	Global._save()
-	print(str(TempCommand))
+#	print(str(TempCommand))
 
 
 func btnPressed():
@@ -47,6 +47,6 @@ func btnPressed():
 	var TempCommand = str("xsetwacom set", " ", Global.PenID, " MapToOutput ", Global.monitorP4, "x", Global.monitorP3, "+", Global.monitorP2, "+", Global.monitorP1)
 	OS.execute('/bin/sh', ['-c', TempCommand], true, output)
 	Global._save()
-	print(str(TempCommand))
+#	print(str(TempCommand))
 	
 

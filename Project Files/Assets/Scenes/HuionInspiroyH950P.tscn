@@ -1,22 +1,24 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" type="StyleBox" id=1]
 [ext_resource path="res://Assets/Scripts/Buttons/SetupButtons1.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Scripts/Buttons/SetIDNumber1.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Scripts/Buttons/PenPressureSlider1.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Sprites/Pens/bambooPen1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Pens/H950PPen1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Scripts/Buttons/HelpButton1.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Scripts/Buttons/ApplyPenButton1.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Scripts/Buttons/ResetPenButton1.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Sprites/Tablets/WacomBambooPen.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Tablets/H950PTablet1.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Sprites/Selections/SelectionBox1(Full1).png" type="Texture" id=10]
-[ext_resource path="res://Assets/Scripts/Buttons/PenTrackingMode1.gd" type="Script" id=11]
-[ext_resource path="res://Assets/Scripts/Buttons/OrientationList1.gd" type="Script" id=12]
-[ext_resource path="res://Assets/Sprites/Monitors/Monitor1.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Scripts/Buttons/GetMonitorInfoButton1.gd" type="Script" id=14]
-[ext_resource path="res://Assets/Scripts/Buttons/SetMonitorBoundsButton1.gd" type="Script" id=15]
-[ext_resource path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" type="Script" id=16]
-[ext_resource path="res://Assets/Scripts/Buttons/ProfileList1.gd" type="Script" id=17]
+[ext_resource path="res://Assets/Scripts/Buttons/TabletApplyBtn1.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Scripts/Buttons/PenTrackingMode1.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Scripts/Buttons/OrientationList1.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Sprites/Monitors/Monitor1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/Tablets/WacomBambooPen.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Scripts/Buttons/GetMonitorInfoButton1.gd" type="Script" id=16]
+[ext_resource path="res://Assets/Scripts/Buttons/SetMonitorBoundsButton1.gd" type="Script" id=17]
+[ext_resource path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" type="Script" id=18]
+[ext_resource path="res://Assets/Scripts/Buttons/ProfileList1.gd" type="Script" id=19]
 
 [node name="MainRoot" type="Node2D"]
 
@@ -43,6 +45,7 @@ __meta__ = {
 
 [node name="Setup" type="Tabs" parent="TabContainer"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -80,7 +83,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 587.0
 margin/bottom = 14.0
-text = "Wacom Devices"
+text = "Huion Devices"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -96,7 +99,7 @@ margin/left = 0.0
 margin/top = 46.0
 margin/right = 587.0
 margin/bottom = 60.0
-text = "Wacom Devices"
+text = "Huion Devices"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -149,7 +152,9 @@ text = "Apply Device ID Number"
 flat = false
 script/script = ExtResource( 3 )
 Root = NodePath("../../../../..")
-Text = NodePath("../LineEdit")
+Text1 = NodePath("../LineEdit")
+Text2 = NodePath("../../Btn1Hbox1/LineEdit")
+Text3 = NodePath("../../Btn1Hbox2/LineEdit")
 
 [node name="Label" type="Label" parent="TabContainer/Setup/SetupVBox/Btn1Hbox"]
 
@@ -322,7 +327,7 @@ Root = NodePath("../../..")
 
 transform/pos = Vector2( 803.225, 258.115 )
 transform/rot = 90.0
-transform/scale = Vector2( 1.5, 1.5 )
+transform/scale = Vector2( 1.3, 1.3 )
 texture = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Pen_Settings"]
@@ -333,9 +338,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 16.0
-margin/top = 256.0
+margin/top = 280.0
 margin/right = 779.0
-margin/bottom = 386.0
+margin/bottom = 410.0
 custom_constants/separation = 32
 alignment = 0
 
@@ -672,8 +677,8 @@ bbcode/bbcode = "[ Key Mod Examples ]
  SPECIALKEY: f1-f35, esc=Esc, up,down,left,right, backspace=Backspace, tab, PgUp,PgDn
  ASCIIKEY: (usual characters the key produces, e.g. a,b,c,1,2,3 etc.)
 
-2    ## 2 = right mouse button
-3    ## 3 = middle mouse button
+2    ## 2 = middle mouse button
+3    ## 3 = right mouse button
 key ctrl z
 key ctrl shift z
 key Control_L z -z
@@ -702,6 +707,7 @@ __meta__ = {
 [node name="Tablet" type="Sprite" parent="TabContainer/Tablet_Settings"]
 
 transform/pos = Vector2( 781.849, 271.36 )
+transform/scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 9 )
 
 [node name="SizeableBox1" type="Patch9Frame" parent="TabContainer/Tablet_Settings"]
@@ -756,7 +762,6 @@ custom_constants/margin_bottom = 8
 
 [node name="PanelContainer" type="PanelContainer" parent="TabContainer/Tablet_Settings/SideButtons1"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -767,34 +772,48 @@ margin/right = 337.0
 margin/bottom = 565.0
 custom_styles/panel = ExtResource( 1 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer"]
 
 focus/ignore_mouse = false
-focus/stop_mouse = false
+focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 1.0
 margin/top = 1.0
 margin/right = 328.0
 margin/bottom = 556.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 317.0
+margin/bottom = 545.0
 custom_constants/separation = 16
 alignment = 0
 
-[node name="BTN1" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN1" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN1"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN1"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -810,7 +829,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN1"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN1"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -825,8 +844,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 1
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN1"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN1"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -834,28 +855,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN2" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN2" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 40.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 64.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN2"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN2"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -871,7 +891,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN2"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN2"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -886,8 +906,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 2
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN2"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN2"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -895,28 +917,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN3" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN3" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 80.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 104.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN3"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN3"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -932,7 +953,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN3"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN3"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -947,8 +968,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 3
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN3"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN3"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -956,28 +979,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN4" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN4" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 120.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 144.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN4"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN4"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -993,7 +1015,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN4"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN4"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1008,8 +1030,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 8
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN4"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN4"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1017,14 +1041,14 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="HSeparator" type="HSeparator" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1032,24 +1056,23 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 160.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 163.0
 
-[node name="BTN5" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN5" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 179.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 203.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN5"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN5"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -1065,7 +1088,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN5"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN5"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1080,8 +1103,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 9
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN5"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN5"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1089,28 +1114,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN6" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN6" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 219.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 243.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN6"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN6"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -1126,7 +1150,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN6"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN6"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1141,8 +1165,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 10
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN6"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN6"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1150,28 +1176,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN7" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN7" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 259.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 283.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN7"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN7"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -1187,7 +1212,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN7"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN7"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1202,8 +1227,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 11
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN7"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN7"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1211,28 +1238,27 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="BTN8" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer"]
+[node name="BTN8" type="HBoxContainer" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 299.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 323.0
 custom_constants/separation = 8
 alignment = 0
 
-[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN8"]
+[node name="Label" type="Label" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN8"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -1248,7 +1274,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN8"]
+[node name="Button" type="Button" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN8"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1263,8 +1289,10 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
+script/script = ExtResource( 11 )
+btnID = 12
 
-[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/VBoxContainer/BTN8"]
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Tablet_Settings/SideButtons1/PanelContainer/MarginContainer/VBoxContainer/BTN8"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -1272,7 +1300,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 120.0
 margin/top = 0.0
-margin/right = 327.0
+margin/right = 307.0
 margin/bottom = 24.0
 placeholder/alpha = 0.6
 focus_mode = 2
@@ -1281,6 +1309,7 @@ caret/caret_blink_speed = 0.65
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Tablet_Settings"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -1307,7 +1336,7 @@ shortcut = null
 text = "Pen Tracking Mode : Pen"
 flat = false
 align = 0
-script/script = ExtResource( 11 )
+script/script = ExtResource( 12 )
 
 [node name="TabletOrientation" type="OptionButton" parent="TabContainer/Tablet_Settings/HBoxContainer"]
 
@@ -1326,7 +1355,7 @@ flat = false
 align = 0
 selected = -1
 items = [  ]
-script/script = ExtResource( 12 )
+script/script = ExtResource( 13 )
 rotDir = "none"
 Text = NodePath("../../Label")
 TabletSprite = NodePath("../../Tablet")
@@ -1355,21 +1384,21 @@ __meta__ = {
 visibility/self_opacity = 0.13
 transform/pos = Vector2( 518.501, 279.549 )
 transform/scale = Vector2( 0.906658, 0.906658 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Monitor2" type="Sprite" parent="TabContainer/Monitor_Settings"]
 
 visibility/visible = false
 transform/pos = Vector2( 785.026, 180.86 )
 transform/scale = Vector2( 0.906658, 0.906658 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Tablet" type="Sprite" parent="TabContainer/Monitor_Settings"]
 
 visibility/visible = false
 transform/pos = Vector2( 507.056, 460.707 )
 transform/scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 9 )
+texture = ExtResource( 15 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Monitor_Settings"]
 
@@ -1429,7 +1458,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Refresh Monitor Info"
 flat = false
-script/script = ExtResource( 14 )
+script/script = ExtResource( 16 )
 Text = NodePath("../../ScrollContainer/DisplayResID")
 
 [node name="SetID" type="Button" parent="TabContainer/Monitor_Settings/VBoxContainer/Btn2Hbox"]
@@ -1448,7 +1477,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Apply Tablet to Monitor Res"
 flat = false
-script/script = ExtResource( 15 )
+script/script = ExtResource( 17 )
 monitorP1 = NodePath("../../../MonitorVBox/TopHBox/LeftTopCorner")
 monitorP2 = NodePath("../../../MonitorVBox/BottomHBox/LeftBottomCorner")
 monitorP3 = NodePath("../../../MonitorVBox/TopHBox/RightTopCorner")
@@ -1471,7 +1500,7 @@ flat = false
 align = 0
 selected = -1
 items = [  ]
-script/script = ExtResource( 16 )
+script/script = ExtResource( 18 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Monitor_Settings/VBoxContainer"]
 
@@ -1703,6 +1732,6 @@ flat = false
 align = 0
 selected = -1
 items = [  ]
-script/script = ExtResource( 17 )
+script/script = ExtResource( 19 )
 
 

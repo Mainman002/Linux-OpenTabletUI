@@ -1,0 +1,291 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://Assets/Scripts/FirstLoad.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeBtn1.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Tablets/WacomBambooPen.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeTextureBtn1.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/Tablets/H950PTablet1.png" type="Texture" id=5]
+
+[node name="FirstLoad" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+nextScene = "BambooPenTablet"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 601.0
+alignment = 0
+
+[node name="SidePanel" type="Panel" parent="HBoxContainer"]
+
+rect/min_size = Vector2( 256, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 256.0
+margin/bottom = 601.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/SidePanel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 6.0
+margin/top = 9.0
+margin/right = 252.0
+margin/bottom = 593.0
+custom_constants/separation = 16
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 246.0
+margin/bottom = 3.0
+
+[node name="Label" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 19.0
+margin/right = 246.0
+margin/bottom = 33.0
+text = "Helper Settings"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ResetSettings" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 49.0
+margin/right = 246.0
+margin/bottom = 69.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Reset Settings"
+flat = false
+
+[node name="HSeparator1" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 85.0
+margin/right = 246.0
+margin/bottom = 88.0
+
+[node name="Label1" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 104.0
+margin/right = 246.0
+margin/bottom = 118.0
+text = "Tablet Menu Switch"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="BambooPen" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 134.0
+margin/right = 246.0
+margin/bottom = 154.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Bamboo Pen"
+flat = false
+script/script = ExtResource( 2 )
+nextScene = "BambooPenTablet"
+
+[node name="H950P" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 170.0
+margin/right = 246.0
+margin/bottom = 190.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Inspiroy H950P"
+flat = false
+script/script = ExtResource( 2 )
+nextScene = "HuionInspiroyH950P"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 206.0
+margin/right = 246.0
+margin/bottom = 209.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/SidePanel/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 225.0
+margin/right = 246.0
+margin/bottom = 584.0
+scroll/horizontal = true
+scroll/vertical = true
+
+[node name="Label 2" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/ScrollContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -1.0
+margin/top = 0.0
+margin/right = 447.0
+margin/bottom = 133.0
+text = "Wacom Bamboo Settings Gui
+
+Credits
+
+Johnathan Mueller : lead godot version developer and project manager
+Jose VC                  : moral support and help getting me started
+Mrwan Ashraf        : lead electron version developer
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MainWindow" type="VBoxContainer" parent="HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 260.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 601.0
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainWindow"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 764.0
+margin/bottom = 295.0
+alignment = 0
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/MainWindow/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 764.0
+margin/bottom = 295.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 1
+params/stretch_mode = 6
+script/script = ExtResource( 4 )
+nextScene = "BambooPenTablet"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/MainWindow"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 299.0
+margin/right = 764.0
+margin/bottom = 302.0
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="HBoxContainer/MainWindow"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 306.0
+margin/right = 764.0
+margin/bottom = 601.0
+alignment = 0
+
+[node name="TextureButton1" type="TextureButton" parent="HBoxContainer/MainWindow/VBoxContainer1"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 764.0
+margin/bottom = 295.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 6
+script/script = ExtResource( 4 )
+nextScene = "HuionInspiroyH950P"
+
+
