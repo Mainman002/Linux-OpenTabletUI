@@ -77,6 +77,10 @@ https://github.com/mhdchehade/pinspiroy-950
 -
 https://bbs.archlinux.org/viewtopic.php?id=210378
 
+(xsetwacom keyboard keys)
+-
+https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
+
 [ Finished Features ]
 -
 [x] a tabbed based ui menu including [ Setup, Pen_Settings, Tablet_Settings, Monitor_Settings, Credits ]
