@@ -145,3 +145,6 @@ https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
 
 ![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/ScreenShots/6.png)
 
+![alt text](https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/ScreenShots/7.png)
+
+
