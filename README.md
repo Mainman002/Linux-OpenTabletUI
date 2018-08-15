@@ -10,18 +10,28 @@ A Wacom Bamboo Pen Tablet Settings UI for Linux
 ( First Video for the godot bamboo pen settings ui version )
 https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
 
+( currently this is using Godot 2.1.3 stable )
+https://downloads.tuxfamily.org/godotengine/2.1.3/
+
 
 [ Things To Install Before Running ]
 -
 libwacom xf86-input-wacom 
 
-(huion tablets will need as well " digimend-kernel-drivers-dkms-git and linux-headers ")
+(your wacom tablet should work without needing the extra steps bellow after restarting)
 
-also make sure to restart after installing so your tablet can be recognised by the ui
+(huion tablets will need these too " digimend-kernel-drivers-dkms-git and linux-headers ")
 
-( currently this is using Godot 2.1.3 stable )
+for huion tablets enter the next few lines of text here -> sudo gedit /etc/X11/xorg.conf.d/50-tablet.conf
 
-https://downloads.tuxfamily.org/godotengine/2.1.3/
+Section "InputClass"
+    Identifier "Tablet"
+    Driver "wacom"
+    MatchDevicePath "/dev/input/event*"
+    MatchUSBID "<VID>:<PID>"
+EndSection
+
+save and reboot, your huion tablet should now work
 
 [ Version Download Links ]
 -
