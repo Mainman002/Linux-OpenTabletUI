@@ -103,7 +103,7 @@ https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
 
 [x] set monitor bounds for the pen cursor
 
-[x] credits menu holding Jose VC and Johnathan Mueller
+[x] credits menu holding Johnathan Mueller, Jose VC, and Mrwan Ashraf
 
 
 [ Stuff I Want / Need For The Future ]
