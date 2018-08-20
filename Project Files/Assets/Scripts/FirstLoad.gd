@@ -3,7 +3,7 @@ extends Node2D
 export (String, "MainRoot", "HuionInspiroyH950P", "BambooPenTablet") var nextScene
 
 func _ready():
-	get_node("HBoxContainer/SidePanel/VBoxContainer/ResetSettings").connect("pressed", self, "resetBtn")
+	get_node("HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer/ResetSettings").connect("pressed", self, "resetBtn")
 	
 
 func resetBtn():

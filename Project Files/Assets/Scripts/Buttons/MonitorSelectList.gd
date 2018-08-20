@@ -6,11 +6,13 @@ var items = ["Monitor-1", "Monitor-2", "Monitor-3", "Monitor-4"]
 var selected = 0
 
 func _ready():
+	selected = Global.SaveData.SelectedMonitor
 	get_node(".").connect("item_selected", self, "itemChanged")
 	add_items()
-	selected = Global.SaveData.SelectedMonitor
 	get_node(".").select(int(selected))
-#	print(str("test : ", selected))
+	var TempCommand = str("xsetwacom set", " ", Global.PenID, " ", "MapToOutput ", "HEAD-", selected)
+	OS.execute('/bin/sh', ['-c', TempCommand], true, output)
+#	print(str("test : ", TempCommand))
 	
 
 func add_items():
@@ -26,11 +28,5 @@ func itemChanged(item):
 	
 	Global.SaveData.SelectedMonitor = item
 	Global._save()
-	
-#	print(str(TempCommand))
-#	Global.selectedProfile = item
-#	Global.SaveData.selectedProfile = item
-#	Global._save()
-#	Global.profileChange()
-#	print(item)
+#	print(str("test : ", TempCommand))
 

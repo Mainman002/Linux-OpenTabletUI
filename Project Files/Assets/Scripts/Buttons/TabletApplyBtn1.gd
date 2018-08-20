@@ -51,6 +51,7 @@ func _ready():
 		btnText = Global.tabletBtn8
 		b8 = btnText
 		Text.set_text(str(Global.SaveData.tabletBtn8))
+	applyBtn()
 
 func applyBtn():
 	if btnID == 1:

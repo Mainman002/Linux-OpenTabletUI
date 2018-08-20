@@ -1,7 +1,5 @@
 extends HSlider
 
-export (NodePath) var Root
-
 var isClicking = false
 
 var allPressure = null
@@ -29,12 +27,10 @@ func _input(event):
 #		print(allPressure)
 
 func PressureChanged(value):
-#	if has_node(str(Root)) and Root != null:
 	value = get_node(".").get_value()
 	Pressure3 = value
 	var TempCommand = str("xsetwacom set", " ", Global.PenID, " ", "PressureCurve ", Pressure1, " ", Pressure2, " ", Pressure3, " ", Pressure4)
 	allPressure = TempCommand
-#	OS.execute('/bin/sh', ['-c', TempCommand], true, output)
 	
 	Global.Pressure1 = Pressure1
 	Global.Pressure2 = Pressure2

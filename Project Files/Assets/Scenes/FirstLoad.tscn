@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Assets/Scripts/FirstLoad.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeBtn1.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Sprites/Tablets/WacomBambooPen.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeTextureBtn1.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Sprites/Tablets/H950PTablet1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" type="StyleBox" id=2]
+[ext_resource path="res://Assets/Scripts/Buttons/ResetAllButton1.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeBtn1.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Instances/Setup/SetupVBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Sprites/Preview/WacomBambooPen.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Scripts/Buttons/SceneChangeTextureBtn1.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Sprites/Preview/H950PTablet.png" type="Texture" id=8]
 
 [node name="FirstLoad" type="Node2D"]
 
@@ -18,59 +21,88 @@ nextScene = "BambooPenTablet"
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
+size_flags/horizontal = 3
+size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 1024.0
+margin/right = 1025.0
 margin/bottom = 601.0
 alignment = 0
 
-[node name="SidePanel" type="Panel" parent="HBoxContainer"]
+[node name="HSplit" type="HSplitContainer" parent="HBoxContainer"]
 
-rect/min_size = Vector2( 256, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1025.0
+margin/bottom = 601.0
+split/offset = 0
+split/collapsed = false
+split/dragger_visibility = 0
+
+[node name="SidePanel" type="PanelContainer" parent="HBoxContainer/HSplit"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 499.0
+margin/bottom = 601.0
+custom_styles/panel = ExtResource( 2 )
+
+[node name="VSplit" type="VSplitContainer" parent="HBoxContainer/HSplit/SidePanel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 1.0
+margin/top = 1.0
+margin/right = 498.0
+margin/bottom = 600.0
+split/offset = 0
+split/collapsed = false
+split/dragger_visibility = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/HSplit/SidePanel/VSplit"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 256.0
-margin/bottom = 601.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/SidePanel"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 6.0
-margin/top = 9.0
-margin/right = 252.0
-margin/bottom = 593.0
+margin/right = 497.0
+margin/bottom = 209.0
 custom_constants/separation = 16
 alignment = 0
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
+size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 246.0
+margin/right = 497.0
 margin/bottom = 3.0
 
-[node name="Label" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
+size_flags/horizontal = 3
+size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 19.0
-margin/right = 246.0
+margin/right = 497.0
 margin/bottom = 33.0
 text = "Helper Settings"
 align = 1
@@ -78,42 +110,44 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="ResetSettings" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="ResetSettings" type="Button" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 197.0
 margin/top = 49.0
-margin/right = 246.0
+margin/right = 300.0
 margin/bottom = 69.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Reset Settings"
 flat = false
+align = 2
+script/script = ExtResource( 3 )
 
-[node name="HSeparator1" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="HSeparator1" type="HSeparator" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
+size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 85.0
-margin/right = 246.0
+margin/right = 497.0
 margin/bottom = 88.0
 
-[node name="Label1" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="Label1" type="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
+size_flags/horizontal = 3
+size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 104.0
-margin/right = 246.0
+margin/right = 497.0
 margin/bottom = 118.0
 text = "Tablet Menu Switch"
 align = 1
@@ -121,77 +155,148 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="BambooPen" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="BambooPen" type="Button" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 202.0
 margin/top = 134.0
-margin/right = 246.0
+margin/right = 295.0
 margin/bottom = 154.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Bamboo Pen"
 flat = false
-script/script = ExtResource( 2 )
+align = 2
+script/script = ExtResource( 4 )
 nextScene = "BambooPenTablet"
 
-[node name="H950P" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="H950P" type="Button" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 193.0
 margin/top = 170.0
-margin/right = 246.0
+margin/right = 303.0
 margin/bottom = 190.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Inspiroy H950P"
 flat = false
-script/script = ExtResource( 2 )
+align = 2
+script/script = ExtResource( 4 )
 nextScene = "HuionInspiroyH950P"
 
-[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/HSplit/SidePanel/VSplit/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
+size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 206.0
-margin/right = 246.0
+margin/right = 497.0
 margin/bottom = 209.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/SidePanel/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/HSplit/SidePanel/VSplit"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 225.0
-margin/right = 246.0
-margin/bottom = 584.0
+margin/top = 221.0
+margin/right = 497.0
+margin/bottom = 599.0
 scroll/horizontal = true
 scroll/vertical = true
 
-[node name="Label 2" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/ScrollContainer"]
+[node name="SetupVBox" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer" instance=ExtResource( 5 )]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
 margin/left = -1.0
 margin/top = 0.0
-margin/right = 447.0
-margin/bottom = 133.0
-text = "Wacom Bamboo Settings Gui
+margin/right = 521.0
+margin/bottom = 366.0
+
+[node name="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]
+
+margin/right = 522.0
+text = "Devices ID Info
+
+* Manually enter the Device ID Number into the correct text slots (numbers only)
+"
+
+[node name="DeviceID" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]
+
+margin/right = 522.0
+
+[node name="Btn1Hbox" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]
+
+margin/right = 522.0
+
+[node name="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox"]
+
+margin/right = 432.0
+
+[node name="LineEdit" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox"]
+
+margin/left = 464.0
+margin/right = 522.0
+
+[node name="Btn1Hbox1" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]
+
+margin/right = 522.0
+
+[node name="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox1"]
+
+margin/right = 432.0
+
+[node name="LineEdit" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox1"]
+
+margin/left = 464.0
+margin/right = 522.0
+
+[node name="Btn1Hbox2" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]
+
+margin/right = 522.0
+
+[node name="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox2"]
+
+margin/right = 432.0
+
+[node name="LineEdit" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox/Btn1Hbox2"]
+
+margin/left = 464.0
+margin/right = 522.0
+
+[node name="Label 2" type="Label" parent="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = -1.0
+margin/top = 0.0
+margin/right = 669.0
+margin/bottom = 366.0
+text = "Digital Drawing Tablet Gui
+
+* Select the tablet from either the side menu or clicking the tablet image 
+(technically they run the same commands just one tablet has buttons and the other doesn't)
+(also if you see [] for device info then your tablet isn't correctly configured and you'll need to 
+set that up before this ui will work)
+
+* once the tablet is selected you'll need to read and manually enter in the correct ID numbers 
+for your tablets Stylus, Eraser, and Pad (click apply device ID button when finished entering the numbers)
+
+* navigate using the top bar and change the settings you want to change
 
 Credits
 
@@ -203,50 +308,77 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="MainWindow" type="VBoxContainer" parent="HBoxContainer"]
+[node name="MainWindow" type="VBoxContainer" parent="HBoxContainer/HSplit"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
-margin/left = 260.0
+margin/left = 511.0
 margin/top = 0.0
-margin/right = 1024.0
+margin/right = 1025.0
 margin/bottom = 601.0
 alignment = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainWindow"]
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/HSplit/MainWindow"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 514.0
+margin/bottom = 3.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/HSplit/MainWindow"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 764.0
+margin/top = 7.0
+margin/right = 514.0
 margin/bottom = 295.0
 alignment = 0
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/MainWindow/VBoxContainer"]
+[node name="Label2" type="Label" parent="HBoxContainer/HSplit/MainWindow/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 514.0
+margin/bottom = 14.0
+text = "Wacom Bamboo Pen"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/HSplit/MainWindow/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 764.0
-margin/bottom = 295.0
+margin/top = 18.0
+margin/right = 514.0
+margin/bottom = 288.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 1
 params/stretch_mode = 6
-script/script = ExtResource( 4 )
+script/script = ExtResource( 7 )
 nextScene = "BambooPenTablet"
 
-[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/MainWindow"]
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/HSplit/MainWindow"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -254,10 +386,10 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 299.0
-margin/right = 764.0
+margin/right = 514.0
 margin/bottom = 302.0
 
-[node name="VBoxContainer1" type="VBoxContainer" parent="HBoxContainer/MainWindow"]
+[node name="VBoxContainer1" type="VBoxContainer" parent="HBoxContainer/HSplit/MainWindow"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -265,27 +397,56 @@ size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 306.0
-margin/right = 764.0
-margin/bottom = 601.0
+margin/right = 514.0
+margin/bottom = 594.0
 alignment = 0
 
-[node name="TextureButton1" type="TextureButton" parent="HBoxContainer/MainWindow/VBoxContainer1"]
+[node name="Label3" type="Label" parent="HBoxContainer/HSplit/MainWindow/VBoxContainer1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 514.0
+margin/bottom = 14.0
+text = "Huion Inspiroy H950P"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureButton1" type="TextureButton" parent="HBoxContainer/HSplit/MainWindow/VBoxContainer1"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 764.0
-margin/bottom = 295.0
+margin/top = 18.0
+margin/right = 514.0
+margin/bottom = 288.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
+textures/normal = ExtResource( 8 )
 params/resize_mode = 1
 params/stretch_mode = 6
-script/script = ExtResource( 4 )
+script/script = ExtResource( 7 )
 nextScene = "HuionInspiroyH950P"
 
+[node name="HSeparator4" type="HSeparator" parent="HBoxContainer/HSplit/MainWindow"]
 
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 598.0
+margin/right = 514.0
+margin/bottom = 601.0
+
+
+[editable path="HBoxContainer/HSplit/SidePanel/VSplit/ScrollContainer/SetupVBox"]

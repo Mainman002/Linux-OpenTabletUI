@@ -28,12 +28,12 @@ var monitorP2 = str(0)
 var monitorP3 = str(1080)
 var monitorP4 = str(1920)
 var SelectedMonitor = 0
-var tabletBtn1 = "ctrl ["
-var tabletBtn2 = "ctrl ]"
+var tabletBtn1 = "ctrl shift +"
+var tabletBtn2 = "ctrl -"
 var tabletBtn3 = "]"
 var tabletBtn4 = "["
-var tabletBtn5 = "x"
-var tabletBtn6 = "2"
+var tabletBtn5 = "2"
+var tabletBtn6 = "ctrl s"
 var tabletBtn7 = "ctrl shift z"
 var tabletBtn8 = "ctrl z"
 
