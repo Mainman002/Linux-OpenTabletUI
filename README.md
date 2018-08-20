@@ -1,4 +1,4 @@
-# Wacom-Bamboo-Settings-Gui #
+# Wacom-Bamboo-Settings-Gui
 A Wacom Bamboo Pen Tablet Settings UI for Linux
 
 ( Screenshots are at the bottom of this Readme file )
