@@ -130,6 +130,8 @@ https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
 
 [ ] setup express keys to launch programs
 
+[ ] apply all settings on boot
+
 [ ]
 
 
