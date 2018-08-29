@@ -105,6 +105,8 @@ https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
 
 [x] credits menu holding Johnathan Mueller, Jose VC, and Mrwan Ashraf
 
+[x] express key layout more suited for krita workflow by default
+
 
 [ Stuff I Want / Need For The Future ]
 -
