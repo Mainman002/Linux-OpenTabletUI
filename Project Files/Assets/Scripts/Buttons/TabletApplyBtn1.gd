@@ -1,6 +1,7 @@
 extends Button
 
 export (int, 1, 12) var btnID = 1
+export (int, 3,10) var tabBtn = 3
 
 var b1 = ""
 var b2 = ""
@@ -11,6 +12,9 @@ var b6 = ""
 var b7 = ""
 var b8 = ""
 
+var pressed = false
+var timer = 8
+
 var output = []
 
 var btnText = "  "
@@ -18,6 +22,8 @@ var btnText = "  "
 onready var Text = get_node("../LineEdit")
 
 func _ready():
+	set_process_input(false)
+	set_process(true)
 	get_node(".").connect("pressed", self, "applyBtn")
 	if btnID == 1:
 		btnText = Global.tabletBtn1
@@ -90,5 +96,43 @@ func applyBtn():
 	OS.execute('/bin/sh', ['-c', TempCommand], true, output)
 	Global._save()
 #	print(str(TempCommand))
+	
 
+func _input(event):
+	if pressed == false:
+		timer = 8
+		pressed = true
+		if Input.is_joy_button_pressed(0, tabBtn):
+			if btnID == 1:
+				b1 = str(Text.get_text())
+				OS.execute('/bin/sh', ['-c', str(b1)], false, output)
+			elif btnID == 2:
+				b2 = str(Text.get_text())
+				OS.execute('/bin/sh', ['-c', str(b2)], false, output)
+			elif btnID == 3:
+				b3 = str(Text.get_text())
+				OS.execute('/bin/sh', ['-c', str(b3)], false, output)
+			elif btnID == 8:
+				OS.execute('/bin/sh', ['-c', 'xkill'], false, output)
+			elif btnID == 9:
+				OS.execute('/bin/sh', ['-c', 'gimp'], false, output)
+			elif btnID == 10:
+				OS.execute('/bin/sh', ['-c', 'gimp'], false, output)
+			elif btnID == 11:
+				OS.execute('/bin/sh', ['-c', 'gimp'], false, output)
+			elif btnID == 12:
+				OS.execute('/bin/sh', ['-c', 'gimp'], false, output)
+			
+		
+	
+
+func _process(delta):
+	if pressed == true:
+		if timer != 0:
+			timer -= 1
+		elif timer == 0:
+			pressed = false
+			timer = 8
+		
+	
 

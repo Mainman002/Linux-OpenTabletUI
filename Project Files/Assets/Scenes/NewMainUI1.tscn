@@ -1,24 +1,56 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=16 format=1]
 
-[ext_resource path="res://Assets/Sprites/Preview/H950PTablet.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Sprites/Icons/Bamboo1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Themes/Dark_theme1.tres" type="Theme" id=3]
-[ext_resource path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" type="StyleBox" id=4]
-[ext_resource path="res://Assets/Instances/Setup/SetupVBox.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" type="Script" id=6]
-[ext_resource path="res://Assets/Scripts/Buttons/PenPressureSlider1.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Scripts/Buttons/HelpButton1.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Scripts/Buttons/ApplyPenButton1.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Scripts/Buttons/ResetPenButton1.gd" type="Script" id=10]
-[ext_resource path="res://Assets/Instances/Tablet/TabletButtonsVBC.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Assets/Instances/Credits/CreditsSC.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Instances/Pen/PenButtonHelpWD.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Sprites/FullLayouts/Digital Drawing Tablet GUI (test3).png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Seperators/DashedLines1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Preview/H950PTablet.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Icons/Bamboo1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Themes/Dark_theme1.tres" type="Theme" id=5]
+[ext_resource path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" type="StyleBox" id=6]
+[ext_resource path="res://Assets/Instances/Setup/SetupVBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Scripts/Buttons/PenPressureSlider1.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Scripts/Buttons/HelpButton1.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Scripts/Buttons/ApplyPenButton1.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Scripts/Buttons/ResetPenButton1.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Instances/Tablet/TabletButtonsVBC.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Instances/Credits/CreditsSC.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Instances/Pen/PenButtonHelpWD.tscn" type="PackedScene" id=15]
 
 [node name="NewMainUI1" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="TextureFrame1" type="TextureFrame" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 600.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="Seperator1" type="TextureFrame" parent="."]
+
+visibility/visible = false
+rect/min_size = Vector2( 6, 6 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 59.0
+margin/right = 179.0
+margin/bottom = 600.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -40,12 +72,13 @@ margin/left = 179.0
 margin/top = 77.0
 margin/right = 1024.0
 margin/bottom = 600.0
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 4
 
 [node name="HeaderVB" type="VBoxContainer" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -60,6 +93,7 @@ alignment = 0
 [node name="HeaderMC" type="MarginContainer" parent="HeaderVB"]
 
 editor/display_folded = true
+visibility/visible = false
 rect/min_size = Vector2( 0, 32 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -97,7 +131,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 64.0
 margin/bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 5
 
@@ -124,9 +158,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 72.0
+margin/top = 0.0
 margin/right = 1024.0
-margin/bottom = 75.0
+margin/bottom = 3.0
 
 [node name="MainWinHC" type="HBoxContainer" parent="HeaderVB"]
 
@@ -135,7 +169,7 @@ focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = 79.0
+margin/top = 7.0
 margin/right = 1024.0
 margin/bottom = 600.0
 alignment = 0
@@ -151,7 +185,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 170.0
-margin/bottom = 521.0
+margin/bottom = 593.0
 alignment = 0
 
 [node name="Button" type="Button" parent="HeaderVB/MainWinHC/SidePanelVC"]
@@ -161,12 +195,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 5 )
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 170.0
 margin/bottom = 64.0
-custom_styles/Button1 = ExtResource( 4 )
+custom_styles/Button1 = ExtResource( 6 )
 toggle_mode = true
 is_pressed = true
 enabled_focus_mode = 0
@@ -181,12 +215,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 5 )
 margin/left = 0.0
 margin/top = 68.0
 margin/right = 170.0
 margin/bottom = 132.0
-custom_styles/Button1 = ExtResource( 4 )
+custom_styles/Button1 = ExtResource( 6 )
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null
@@ -200,12 +234,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 5 )
 margin/left = 0.0
 margin/top = 136.0
 margin/right = 170.0
 margin/bottom = 200.0
-custom_styles/Button1 = ExtResource( 4 )
+custom_styles/Button1 = ExtResource( 6 )
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null
@@ -219,12 +253,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 5 )
 margin/left = 0.0
 margin/top = 204.0
 margin/right = 170.0
 margin/bottom = 268.0
-custom_styles/Button1 = ExtResource( 4 )
+custom_styles/Button1 = ExtResource( 6 )
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null
@@ -238,12 +272,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 5 )
 margin/left = 0.0
 margin/top = 272.0
 margin/right = 170.0
 margin/bottom = 336.0
-custom_styles/Button1 = ExtResource( 4 )
+custom_styles/Button1 = ExtResource( 6 )
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null
@@ -259,10 +293,11 @@ size_flags/vertical = 2
 margin/left = 174.0
 margin/top = 0.0
 margin/right = 177.0
-margin/bottom = 521.0
+margin/bottom = 593.0
 
 [node name="MainWinMC" type="MarginContainer" parent="HeaderVB/MainWinHC"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
@@ -270,7 +305,7 @@ size_flags/vertical = 3
 margin/left = 181.0
 margin/top = 0.0
 margin/right = 1024.0
-margin/bottom = 521.0
+margin/bottom = 593.0
 custom_constants/margin_right = 32
 custom_constants/margin_top = 32
 custom_constants/margin_left = 32
@@ -278,6 +313,7 @@ custom_constants/margin_bottom = 32
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HeaderVB/MainWinHC/MainWinMC"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
@@ -285,12 +321,13 @@ size_flags/vertical = 3
 margin/left = 32.0
 margin/top = 32.0
 margin/right = 811.0
-margin/bottom = 489.0
+margin/bottom = 561.0
 scroll/horizontal = true
 scroll/vertical = true
 
 [node name="MainWinVC" type="VBoxContainer" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 3
@@ -298,7 +335,7 @@ size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 779.0
-margin/bottom = 457.0
+margin/bottom = 529.0
 custom_constants/separation = 25
 alignment = 0
 
@@ -313,12 +350,12 @@ margin/top = 0.0
 margin/right = 779.0
 margin/bottom = 3.0
 
-[node name="SetupVBox" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 5 )]
+[node name="SetupVBox" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 7 )]
 
 margin/left = 0.0
 margin/top = 28.0
 margin/right = 779.0
-margin/bottom = 457.0
+margin/bottom = 529.0
 
 [node name="HSeparator1" type="HSeparator" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
 
@@ -341,9 +378,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 360.0
-margin/right = 767.0
-margin/bottom = 392.0
+margin/top = 497.0
+margin/right = 779.0
+margin/bottom = 529.0
 custom_constants/separation = 16
 alignment = 0
 
@@ -401,9 +438,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 409.0
+margin/top = 509.0
 margin/right = 779.0
-margin/bottom = 429.0
+margin/bottom = 529.0
 custom_constants/separation = 16
 alignment = 0
 
@@ -440,7 +477,7 @@ flat = false
 align = 0
 selected = -1
 items = [  ]
-script/script = ExtResource( 6 )
+script/script = ExtResource( 8 )
 
 [node name="HSeparator3" type="HSeparator" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
 
@@ -450,9 +487,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 454.0
+margin/top = 526.0
 margin/right = 779.0
-margin/bottom = 457.0
+margin/bottom = 529.0
 
 [node name="PenPressure" type="VBoxContainer" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
 
@@ -464,9 +501,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 433.0
-margin/right = 767.0
-margin/bottom = 497.0
+margin/top = 28.0
+margin/right = 779.0
+margin/bottom = 92.0
 alignment = 0
 
 [node name="HBoxContainer 2" type="HBoxContainer" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenPressure"]
@@ -477,7 +514,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 14.0
 alignment = 0
 
@@ -489,7 +526,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 253.0
+margin/right = 257.0
 margin/bottom = 14.0
 text = "Light"
 percent_visible = 1.0
@@ -502,9 +539,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 257.0
+margin/left = 261.0
 margin/top = 0.0
-margin/right = 510.0
+margin/right = 518.0
 margin/bottom = 14.0
 text = "Pen Pressure"
 align = 1
@@ -518,9 +555,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 514.0
+margin/left = 522.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 14.0
 text = "Firm"
 align = 2
@@ -536,7 +573,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 18.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 34.0
 alignment = 0
 
@@ -548,7 +585,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 16.0
 range/min = 0.0
 range/max = 100.0
@@ -560,7 +597,7 @@ range/rounded = false
 tick_count = 1
 ticks_on_borders = true
 focus_mode = 2
-script/script = ExtResource( 7 )
+script/script = ExtResource( 9 )
 
 [node name="HSeparator4" type="HSeparator" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
 
@@ -570,9 +607,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 454.0
+margin/top = 117.0
 margin/right = 779.0
-margin/bottom = 457.0
+margin/bottom = 120.0
 
 [node name="PenButtonsVC" type="VBoxContainer" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
 
@@ -583,9 +620,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 550.0
-margin/right = 767.0
-margin/bottom = 680.0
+margin/top = 145.0
+margin/right = 779.0
+margin/bottom = 275.0
 custom_constants/separation = 32
 alignment = 0
 
@@ -598,7 +635,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 20.0
 alignment = 0
 
@@ -617,7 +654,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Help"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 10 )
 PopWindow = NodePath("../../../../../../../../PenButtonHelpWD")
 
 [node name="Label" type="Label" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/HBoxContainer"]
@@ -628,7 +665,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 46.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 20.0
 text = "Pen Button Mapping"
 align = 1
@@ -646,7 +683,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 52.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 130.0
 custom_constants/separation = 30
 alignment = 0
@@ -660,7 +697,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 24.0
 alignment = 0
 
@@ -689,7 +726,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 516.0
 margin/top = 0.0
-margin/right = 562.0
+margin/right = 566.0
 margin/bottom = 24.0
 
 [node name="ApplyBtn" type="Button" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/PenBtnVbox/PenBtnHbox2"]
@@ -698,16 +735,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 566.0
+margin/left = 570.0
 margin/top = 0.0
-margin/right = 614.0
+margin/right = 618.0
 margin/bottom = 24.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
-script/script = ExtResource( 9 )
+script/script = ExtResource( 11 )
 button = 1
 Text = NodePath("../LineEdit2")
 
@@ -717,9 +754,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 618.0
+margin/left = 622.0
 margin/top = 0.0
-margin/right = 664.0
+margin/right = 672.0
 margin/bottom = 24.0
 
 [node name="ResetPenBtns2" type="Button" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/PenBtnVbox/PenBtnHbox2"]
@@ -728,16 +765,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 668.0
+margin/left = 676.0
 margin/top = 0.0
-margin/right = 716.0
+margin/right = 724.0
 margin/bottom = 24.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Reset"
 flat = false
-script/script = ExtResource( 10 )
+script/script = ExtResource( 12 )
 Text = NodePath("../LineEdit2")
 button = "btn3"
 
@@ -747,9 +784,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 720.0
+margin/left = 728.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 24.0
 
 [node name="PenBtnHbox1" type="HBoxContainer" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/PenBtnVbox"]
@@ -761,7 +798,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 54.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 78.0
 alignment = 0
 
@@ -790,7 +827,7 @@ size_flags/horizontal = 3
 size_flags/vertical = 2
 margin/left = 516.0
 margin/top = 0.0
-margin/right = 562.0
+margin/right = 566.0
 margin/bottom = 24.0
 
 [node name="ApplyBtn" type="Button" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/PenBtnVbox/PenBtnHbox1"]
@@ -799,16 +836,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 566.0
+margin/left = 570.0
 margin/top = 0.0
-margin/right = 614.0
+margin/right = 618.0
 margin/bottom = 24.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Apply"
 flat = false
-script/script = ExtResource( 9 )
+script/script = ExtResource( 11 )
 button = 0
 Text = NodePath("../LineEdit1")
 
@@ -818,9 +855,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 618.0
+margin/left = 622.0
 margin/top = 0.0
-margin/right = 664.0
+margin/right = 672.0
 margin/bottom = 24.0
 
 [node name="ResetPenBtns1" type="Button" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC/PenButtonsVC/PenBtnVbox/PenBtnHbox1"]
@@ -829,16 +866,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 668.0
+margin/left = 676.0
 margin/top = 0.0
-margin/right = 716.0
+margin/right = 724.0
 margin/bottom = 24.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Reset"
 flat = false
-script/script = ExtResource( 10 )
+script/script = ExtResource( 12 )
 Text = NodePath("../LineEdit1")
 button = "btn2"
 
@@ -848,9 +885,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 2
-margin/left = 720.0
+margin/left = 728.0
 margin/top = 0.0
-margin/right = 767.0
+margin/right = 779.0
 margin/bottom = 24.0
 
 [node name="HSeparator5" type="HSeparator" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC"]
@@ -861,11 +898,11 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 550.0
-margin/right = 767.0
-margin/bottom = 553.0
+margin/top = 300.0
+margin/right = 779.0
+margin/bottom = 303.0
 
-[node name="TabletButtonsVBC" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 11 )]
+[node name="TabletButtonsVBC" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 13 )]
 
 visibility/visible = false
 margin/left = 0.0
@@ -885,7 +922,7 @@ margin/top = 733.0
 margin/right = 767.0
 margin/bottom = 736.0
 
-[node name="CreditsSC" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 12 )]
+[node name="CreditsSC" parent="HeaderVB/MainWinHC/MainWinMC/ScrollContainer/MainWinVC" instance=ExtResource( 14 )]
 
 visibility/visible = false
 rect/min_size = Vector2( 128, 128 )
@@ -908,6 +945,6 @@ margin/top = 733.0
 margin/right = 767.0
 margin/bottom = 736.0
 
-[node name="PenButtonHelpWD" parent="." instance=ExtResource( 13 )]
+[node name="PenButtonHelpWD" parent="." instance=ExtResource( 15 )]
 
 

@@ -287,6 +287,7 @@ caret/caret_blink_speed = 0.65
 
 [node name="Pen_Settings" type="Tabs" parent="TabContainer"]
 
+editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -312,6 +313,7 @@ texture = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Pen_Settings"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -743,6 +745,7 @@ custom_constants/margin_bottom = 8
 
 [node name="PanelContainer" type="PanelContainer" parent="TabContainer/Tablet_Settings/SideButtons1"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

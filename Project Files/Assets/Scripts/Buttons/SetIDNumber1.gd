@@ -9,7 +9,7 @@ var ID1 = 0
 var ID2 = 0
 var ID3 = 0
 
-#var output = []
+var output = []
 
 func _ready():
 	get_node(".").connect("pressed", self, "btnPressed")
@@ -20,9 +20,10 @@ func _ready():
 	get_node(Text2).set_text(str(ID2))
 	get_node(Text3).set_text(str(ID3))
 	btnPressed()
+	
 
 func btnPressed():
-#	OS.execute('/bin/sh', ['-c', 'xsetwacom list devices'], true, output)
+#	OS.execute('/bin/sh', ['-c', 'gimp'], true, output)
 	
 #	if has_node(str(Root)) and Root != null:
 	Global.PenID = get_node(str(Text1)).get_text()
