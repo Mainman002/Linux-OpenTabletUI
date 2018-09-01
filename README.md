@@ -1,5 +1,5 @@
-# Wacom-Bamboo-Settings-Gui
-A Wacom Bamboo Pen Tablet Settings UI for Linux
+# Digital-Graphics-Tablet-Gui
+A Graphics Tablet Settings UI for Linux using xsetwacom commands
 
 ( Screenshots are at the bottom of this Readme file )
 
