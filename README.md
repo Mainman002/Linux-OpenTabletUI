@@ -46,7 +46,7 @@ https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%2
 
 [ Godot_2x Project Files ]
 -
- https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/Project%20Files/Project%20Files.zip
+ https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/Project%20Files/Project%20Files.zip?raw=true
 
 [ Helpful Links ]
 -
