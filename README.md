@@ -116,7 +116,7 @@ https://github.com/lubosz/wacom-utility/blob/master/keymap.txt
 -
 [ ] improve perforamcne and reduce cpu / ram usage by upgrading from godot to electron, javascript, C, C++, etc
 
-[ ] monitor draggable box for faster visual aid on viweport cursor limits
+[ ] monitor draggable box for faster visual aid on viewport cursor limits
 
 [ ] tablet draggable box for fast and easy limits for pen locations on the tablet surface
 
