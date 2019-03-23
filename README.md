@@ -22,6 +22,10 @@ libwacom xf86-input-wacom
 
 (huion tablets will need these too " digimend-kernel-drivers-dkms-git and linux-headers ")
 
+This Guide can help figuring out the proper line of code -> https://github.com/DIGImend/digimend-kernel-drivers
+
+open a terminal and run " lsusb " without quotes to get your tablets ID number then
+
 for huion tablets enter the next few lines of text here -> sudo gedit /etc/X11/xorg.conf.d/50-tablet.conf
 
 Section "InputClass"
