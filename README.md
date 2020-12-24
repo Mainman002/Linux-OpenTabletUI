@@ -10,8 +10,8 @@ A Graphics Tablet Settings UI for Linux using xsetwacom commands
 ( First Video for the godot bamboo pen settings ui version )
 https://www.youtube.com/watch?v=j-o8lzXfHqg&t=0s
 
-( currently this is using Godot 2.1.3 stable )
-https://downloads.tuxfamily.org/godotengine/2.1.3/
+( currently this is using Godot 3.2.3 stable )
+https://downloads.tuxfamily.org/godotengine/3.2.3/
 
 
 [ Things To Install Before Running ]
@@ -36,21 +36,6 @@ Section "InputClass"
 EndSection
 
 save and reboot, your huion tablet should now work
-
-[ Version Download Links ]
--
-
-[ Linux 32bit Export ]
--
-https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_32bit.zip
-
-[ Linux 64bit Export ]
--
-https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_64bit.zip
-
-[ Godot_2x Project Files ]
--
- https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/Project%20Files/Project%20Files.zip?raw=true
 
 [ Helpful Links ]
 -
