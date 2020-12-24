@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.210938, 0.210938, 0.210938, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.277344, 0.277344, 0.277344, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.40625, 0.40625, 0.40625, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.189667, 0.193601, 0.214844, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.188235, 0.192157, 0.211765, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.227451, 0.231373, 0.25098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.188235, 0.192157, 0.211765, 1 )
+
+[resource]
+Button/styles/Button1 = SubResource( 1 )
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 3 )
+Panel/styles/FlatPanel1 = SubResource( 4 )
+PanelContainer/styles/FlatPanelContainer1 = SubResource( 5 )
+PanelContainer/styles/panel = SubResource( 6 )
+TabContainer/styles/panel = SubResource( 7 )

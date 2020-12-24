@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=2]
+
+
+[node  name="CreditsSC" type="ScrollContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=0
+size_flags_vertical=2
+margin_left=296.0
+margin_top=0.0
+margin_right=1025.0
+margin_bottom=564.0
+scroll_horizontal=true
+scroll_vertical=true
+
+[node  name="Label" parent="." type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=0.0
+margin_right=729.0
+margin_bottom=564.0
+text="Digital Drawing Tablet Gui
+
+Credits
+
+Johnathan Mueller : lead godot version developer and project manager
+Jose VC                  : moral support and help getting me started
+Mrwan Ashraf        : lead electron version developer
+"
+valign=1
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1

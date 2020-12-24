@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/GetMonitorInfoButton1.gd" id=1]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/SetMonitorBoundsButton1.gd" id=2]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" id=3]
+
+
+[node  name="MonitorVC" type="VBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=389.0
+margin_top=7.0
+margin_right=645.0
+margin_bottom=562.0
+custom_constants/separation=16
+alignment=0
+
+[node  name="Label1" parent="." type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=0
+margin_left=0.0
+margin_top=0.0
+margin_right=256.0
+margin_bottom=14.0
+text="Monitors"
+align=1
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="Btn2Hbox" parent="." type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=30.0
+margin_right=256.0
+margin_bottom=50.0
+custom_constants/separation=32
+alignment=0
+
+[node  name="GetDevices" parent="Btn2Hbox" type="Button"]
+
+visible=false
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=0.0
+margin_right=143.0
+margin_bottom=20.0
+toggle_mode=false
+enabled_focus_mode=2
+shortcut=null
+text="Refresh Monitor Info"
+flat=false
+script=ExtResource(1)
+Text=NodePath("../../ScrollContainer/DisplayResID")
+
+[node  name="SetID" parent="Btn2Hbox" type="Button"]
+
+visible=false
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=0.0
+margin_right=189.0
+margin_bottom=20.0
+toggle_mode=false
+enabled_focus_mode=2
+shortcut=null
+text="Apply Tablet to Monitor Res"
+flat=false
+script=ExtResource(2)
+monitorP1=NodePath("../../../MonitorVBox/TopHBox/LeftTopCorner")
+monitorP2=NodePath("../../../MonitorVBox/BottomHBox/LeftBottomCorner")
+monitorP3=NodePath("../../../MonitorVBox/TopHBox/RightTopCorner")
+monitorP4=NodePath("../../../MonitorVBox/BottomHBox/RightBottomCorner")
+
+[node  name="MonitorSelect" parent="Btn2Hbox" type="OptionButton"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=0.0
+margin_right=256.0
+margin_bottom=20.0
+toggle_mode=false
+enabled_focus_mode=2
+shortcut=null
+flat=false
+align=0
+selected=-1
+items=[  ]
+script=ExtResource(3)
+
+[node  name="ScrollContainer" parent="." type="ScrollContainer"]
+
+visible=false
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=66.0
+margin_right=435.0
+margin_bottom=555.0
+scroll_horizontal=true
+scroll_vertical=true
+
+[node  name="DisplayResID" parent="ScrollContainer" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=0
+margin_left=0.0
+margin_top=0.0
+margin_right=102.0
+margin_bottom=14.0
+text="Display Devices"
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1

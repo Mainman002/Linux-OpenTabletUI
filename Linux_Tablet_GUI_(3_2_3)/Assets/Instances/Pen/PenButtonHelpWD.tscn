@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource type="StyleBox" path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" id=1]
+
+
+[node  name="PenButtonHelpWD" type="WindowDialog"]
+
+editor/display_folded=true
+visible=false
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=52.0
+margin_top=29.0
+margin_right=746.0
+margin_bottom=553.0
+custom_styles/panel=ExtResource(1)
+popup_exclusive=false
+window_title=""
+
+[node  name="ScrollContainer" parent="." type="ScrollContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=9.0
+margin_top=9.0
+margin_right=686.0
+margin_bottom=513.0
+scroll_horizontal=true
+scroll_vertical=true
+
+[node  name="Label" parent="ScrollContainer" type="RichTextLabel"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=0.0
+margin_right=677.0
+margin_bottom=504.0
+bbcode_enabled=false
+bbcode_text="[ Key Mod Examples ]
+
+ MODIFIER: (each can be prefix with an l or an r for the left/right modifier (no prefix = left)
+    ctrl=ctl=control, meta, alt, shift, super, hyper
+ SPECIALKEY: f1-f35, esc=Esc, up,down,left,right, backspace=Backspace, tab, PgUp,PgDn
+ ASCIIKEY: (usual characters the key produces, e.g. a,b,c,1,2,3 etc.)
+
+2    ## 2 = middle mouse button
+3    ## 3 = right mouse button
+key ctrl z
+key ctrl shift z
+key Control_L z -z
+key shift button 1"
+visible_characters=-1

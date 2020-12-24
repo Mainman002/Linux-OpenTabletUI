@@ -1,0 +1,230 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/SetupButtons1.gd" id=1]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/SetIDNumber1.gd" id=2]
+
+
+[node  name="SetupVBox" type="VBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=211.0
+margin_top=27.0
+margin_right=798.0
+margin_bottom=558.0
+custom_constants/separation=32
+alignment=0
+
+[node  name="Label" parent="." type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=0
+margin_left=0.0
+margin_top=0.0
+margin_right=587.0
+margin_bottom=65.0
+text="Huion Devices
+
+* Manually enter the Device ID into the correct text slots (numbers only)
+"
+align=1
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="DeviceID" parent="." type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=0
+margin_left=0.0
+margin_top=97.0
+margin_right=587.0
+margin_bottom=111.0
+text="Huion Devices"
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="Btn1Hbox" parent="." type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=143.0
+margin_right=587.0
+margin_bottom=167.0
+custom_constants/separation=32
+alignment=0
+
+[node  name="GetDevices" parent="Btn1Hbox" type="Button"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=0.0
+margin_right=137.0
+margin_bottom=24.0
+toggle_mode=false
+enabled_focus_mode=0
+shortcut=null
+text="Refresh Device Info"
+flat=false
+script=ExtResource(1)
+Text=NodePath("../../DeviceID")
+
+[node  name="SetID" parent="Btn1Hbox" type="Button"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=169.0
+margin_top=0.0
+margin_right=340.0
+margin_bottom=24.0
+toggle_mode=false
+enabled_focus_mode=0
+shortcut=null
+text="Apply Device ID Number"
+flat=false
+script=ExtResource(2)
+Root=NodePath("../../../../..")
+Text1=NodePath("../LineEdit")
+Text2=NodePath("../../Btn1Hbox1/LineEdit")
+Text3=NodePath("../../Btn1Hbox2/LineEdit")
+
+[node  name="Label" parent="Btn1Hbox" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=0
+margin_left=372.0
+margin_top=5.0
+margin_right=497.0
+margin_bottom=19.0
+text="STYLUS"
+align=2
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="LineEdit" parent="Btn1Hbox" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=529.0
+margin_top=0.0
+margin_right=587.0
+margin_bottom=24.0
+text="10"
+placeholder_text="14"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="Btn1Hbox1" parent="." type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=199.0
+margin_right=587.0
+margin_bottom=223.0
+custom_constants/separation=32
+alignment=0
+
+[node  name="Label" parent="Btn1Hbox1" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=0
+margin_left=0.0
+margin_top=5.0
+margin_right=497.0
+margin_bottom=19.0
+text="ERASER"
+align=2
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="LineEdit" parent="Btn1Hbox1" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=529.0
+margin_top=0.0
+margin_right=587.0
+margin_bottom=24.0
+text="11"
+placeholder_text="14"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="Btn1Hbox2" parent="." type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=255.0
+margin_right=587.0
+margin_bottom=279.0
+custom_constants/separation=32
+alignment=0
+
+[node  name="Label" parent="Btn1Hbox2" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=0
+margin_left=0.0
+margin_top=5.0
+margin_right=497.0
+margin_bottom=19.0
+text="PAD"
+align=2
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="LineEdit" parent="Btn1Hbox2" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=529.0
+margin_top=0.0
+margin_right=587.0
+margin_bottom=24.0
+text="12"
+placeholder_text="14"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65

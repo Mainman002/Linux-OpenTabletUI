@@ -1,0 +1,187 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource type="StyleBox" path="res://Assets/Themes/panelDarkBG1_styleboxflat.tres" id=1]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Monitors/Monitor1.png" id=2]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Tablets/WacomBambooPen.png" id=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Instances/Monitor/MonitorVC.tscn" id=4]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Selections/SelectionBox1(Full1).png" id=5]
+
+
+[node  name="Monitor_Settings" type="Tabs"]
+
+editor/display_folded=true
+anchor_right=1
+anchor_bottom=1
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=1.0
+margin_top=25.0
+margin_right=1.0
+margin_bottom=1.0
+custom_styles/panel=ExtResource(1)
+__meta__={
+"_edit_lock_": true
+}
+
+[node  name="Monitor1" parent="." type="Sprite"]
+
+visibility/self_opacity=0.13
+position=Vector2( 518.501, 279.549 )
+scale=Vector2( 0.906658, 0.906658 )
+texture=ExtResource(2)
+
+[node  name="Monitor2" parent="." type="Sprite"]
+
+visible=false
+position=Vector2( 785.026, 180.86 )
+scale=Vector2( 0.906658, 0.906658 )
+texture=ExtResource(2)
+
+[node  name="Tablet" parent="." type="Sprite"]
+
+visible=false
+position=Vector2( 507.056, 460.707 )
+scale=Vector2( 0.9, 0.9 )
+texture=ExtResource(3)
+
+[node  name="MonitorVC" parent="." type="VBoxContainer" instance=ExtResource(4)]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=389.0
+margin_top=7.0
+margin_right=645.0
+margin_bottom=562.0
+custom_constants/separation=16
+alignment=0
+
+[node  name="MonitorVBox" parent="." type="VBoxContainer"]
+
+editor/display_folded=true
+visible=false
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=569.0
+margin_top=7.0
+margin_right=1001.0
+margin_bottom=257.0
+custom_constants/separation=190
+alignment=0
+
+[node  name="TopHBox" parent="MonitorVBox" type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=0.0
+margin_right=432.0
+margin_bottom=30.0
+custom_constants/separation=190
+alignment=0
+
+[node  name="LeftTopCorner" parent="MonitorVBox/TopHBox" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=0.0
+margin_right=121.0
+margin_bottom=30.0
+text="0"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="RightTopCorner" parent="MonitorVBox/TopHBox" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=311.0
+margin_top=0.0
+margin_right=432.0
+margin_bottom=30.0
+text="1080"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="BottomHBox" parent="MonitorVBox" type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=220.0
+margin_right=432.0
+margin_bottom=250.0
+custom_constants/separation=190
+alignment=0
+
+[node  name="LeftBottomCorner" parent="MonitorVBox/BottomHBox" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=0.0
+margin_top=0.0
+margin_right=121.0
+margin_bottom=30.0
+text="0"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="RightBottomCorner" parent="MonitorVBox/BottomHBox" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=3
+margin_left=311.0
+margin_top=0.0
+margin_right=432.0
+margin_bottom=30.0
+text="1920"
+placeholder_alpha=0.6
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+
+[node  name="SizeableBox1" parent="." type="Patch9Frame"]
+
+visible=false
+rect/scale=Vector2( 0.5, 0.5 )
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=580.0
+margin_top=38.0
+margin_right=1401.0
+margin_bottom=414.0
+texture=ExtResource(5)
+patch_margin_left=64
+patch_margin_top=64
+patch_margin_right=64
+patch_margin_bottom=64

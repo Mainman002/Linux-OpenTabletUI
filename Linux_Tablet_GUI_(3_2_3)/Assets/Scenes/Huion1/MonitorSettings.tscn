@@ -1,0 +1,476 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/Instances/Pen/PenButtonHelpWD.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Themes/Dark_theme1.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Sprites/Icons/DSGUI1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Buttons/SetupPanelBTN1_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Buttons/SetupPanelBTN1_hover.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Buttons/SetupPanelBTN1_normal.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Scripts/Buttons/SideNavigationBTNS1.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Scripts/Buttons/QuitBTN.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Scripts/Buttons/ResetAllButton1.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Scripts/Buttons/FPSLimit1.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Scripts/Buttons/ProfileListBox1.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Scripts/Buttons/GetMonitorInfoButton1.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Scripts/Buttons/MonitorSelectList.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Sprites/Monitors/Monitor1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/Tablets/H950PTablet1.png" type="Texture" id=16]
+
+[node name="TabletMain" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PenButtonHelpWD" parent="." instance=ExtResource( 1 )]
+margin_left = 212.0
+margin_top = 44.0
+margin_right = 733.0
+margin_bottom = 571.0
+
+[node name="MasterPC" type="PanelContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 599.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterHBC" type="HBoxContainer" parent="MasterPC"]
+margin_right = 1024.0
+margin_bottom = 599.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SideMC" type="MarginContainer" parent="MasterPC/MasterHBC"]
+margin_right = 145.0
+margin_bottom = 599.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="VBC1" type="VBoxContainer" parent="MasterPC/MasterHBC/SideMC"]
+margin_top = 4.0
+margin_right = 141.0
+margin_bottom = 595.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureFrame" type="TextureRect" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_right = 64.0
+margin_bottom = 64.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 68.0
+margin_right = 3.0
+margin_bottom = 72.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="WelcomeTB" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 126.0
+margin_right = 141.0
+margin_bottom = 158.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 7 )
+nextScene = "Welcome"
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/WelcomeTB"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Welcome"
+valign = 1
+
+[node name="SetupTB" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 185.0
+margin_right = 141.0
+margin_bottom = 217.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 7 )
+nextScene = "Setup"
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/SetupTB"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Setup"
+valign = 1
+
+[node name="PenSettings" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 243.0
+margin_right = 141.0
+margin_bottom = 275.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 7 )
+nextScene = "PenSettings"
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/PenSettings"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Pen Settings"
+valign = 1
+
+[node name="TabletSettings" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 302.0
+margin_right = 141.0
+margin_bottom = 334.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 7 )
+nextScene = "TabletSettings"
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/TabletSettings"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Tablet Settings"
+valign = 1
+
+[node name="MonitorSettings" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 360.0
+margin_right = 141.0
+margin_bottom = 392.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/MonitorSettings"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Monitor Settings"
+valign = 1
+
+[node name="Credits" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 419.0
+margin_right = 141.0
+margin_bottom = 451.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 7 )
+nextScene = "Credits"
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/Credits"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Credits"
+valign = 1
+
+[node name="Close" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 477.0
+margin_right = 141.0
+margin_bottom = 509.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/Close"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Close"
+valign = 1
+
+[node name="FPSLimitVB" type="VBoxContainer" parent="MasterPC/MasterHBC/SideMC/VBC1"]
+margin_top = 536.0
+margin_right = 129.0
+margin_bottom = 591.0
+size_flags_horizontal = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB"]
+margin_right = 3.0
+margin_bottom = 4.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="ResetSettings" type="TextureButton" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB"]
+visible = false
+margin_top = 204.0
+margin_right = 141.0
+margin_bottom = 236.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB/ResetSettings"]
+margin_left = 4.0
+margin_right = 141.0
+margin_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Reset Settings"
+valign = 1
+
+[node name="FPSLimitHB" type="HBoxContainer" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB"]
+margin_top = 29.0
+margin_right = 129.0
+margin_bottom = 53.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB/FPSLimitHB"]
+margin_right = 59.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "FPS Limit"
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB/FPSLimitHB"]
+margin_left = 63.0
+margin_right = 67.0
+margin_bottom = 3.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB/FPSLimitHB"]
+margin_left = 71.0
+margin_right = 129.0
+margin_bottom = 24.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "30"
+align = 1
+max_length = 2
+script = ExtResource( 10 )
+
+[node name="OptionButton" type="OptionButton" parent="MasterPC/MasterHBC/SideMC/VBC1/FPSLimitVB"]
+visible = false
+margin_top = 232.0
+margin_right = 141.0
+margin_bottom = 264.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = false
+enabled_focus_mode = 0
+script = ExtResource( 11 )
+
+[node name="SeperatorHBC" type="VBoxContainer" parent="MasterPC/MasterHBC"]
+visible = false
+margin_left = 149.0
+margin_right = 584.0
+margin_bottom = 599.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="MasterPC/MasterHBC/SeperatorHBC"]
+margin_right = 4.0
+margin_bottom = 3.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="VSeparator1" type="VSeparator" parent="MasterPC/MasterHBC/SeperatorHBC"]
+margin_top = 301.0
+margin_right = 4.0
+margin_bottom = 599.0
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MasterPC/MasterHBC"]
+margin_left = 149.0
+margin_right = 1024.0
+margin_bottom = 599.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 32
+custom_constants/margin_top = 12
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="MainHBC" type="VBoxContainer" parent="MasterPC/MasterHBC/MarginContainer"]
+margin_left = 32.0
+margin_top = 12.0
+margin_right = 843.0
+margin_bottom = 567.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 32
+
+[node name="WelcomeLabel" type="HBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC"]
+margin_right = 811.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/WelcomeLabel"]
+margin_right = 105.0
+margin_bottom = 14.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Monitor Settings"
+
+[node name="HSeparator" type="HSeparator" parent="MasterPC/MasterHBC/MarginContainer/MainHBC"]
+margin_top = 46.0
+margin_right = 811.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC"]
+margin_top = 82.0
+margin_right = 811.0
+margin_bottom = 555.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MonitorVC" type="VBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer"]
+margin_right = 811.0
+margin_bottom = 473.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="Label1" type="Label" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC"]
+margin_right = 57.0
+margin_bottom = 14.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Monitors"
+align = 1
+
+[node name="Btn2Hbox" type="HBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC"]
+margin_top = 30.0
+margin_right = 177.0
+margin_bottom = 44.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_constants/separation = 32
+
+[node name="GetDevices" type="Button" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC/Btn2Hbox"]
+margin_right = 131.0
+margin_bottom = 14.0
+focus_mode = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+enabled_focus_mode = 0
+text = "Refresh Monitor Info"
+script = ExtResource( 12 )
+Text = NodePath("../../ScrollContainer/DisplayResID")
+
+[node name="MonitorSelect" type="OptionButton" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC/Btn2Hbox"]
+margin_left = 163.0
+margin_right = 177.0
+margin_bottom = 14.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = false
+script = ExtResource( 13 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC"]
+margin_top = 60.0
+margin_right = 811.0
+margin_bottom = 473.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal = 1
+scroll_vertical = 1
+
+[node name="DisplayResID" type="Label" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/MonitorVC/ScrollContainer"]
+margin_right = 102.0
+margin_bottom = 14.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Display Devices"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer"]
+visible = false
+margin_left = 407.0
+margin_right = 811.0
+margin_bottom = 505.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/VBoxContainer"]
+size_flags_horizontal = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="TextureFrame" type="TextureRect" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/VBoxContainer/HBoxContainer"]
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 14 )
+expand = true
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/VBoxContainer"]
+margin_top = 254.0
+margin_bottom = 254.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="TextureFrame1" type="TextureRect" parent="MasterPC/MasterHBC/MarginContainer/MainHBC/HBoxContainer/VBoxContainer/HBoxContainer1"]
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 16 )
+expand = true

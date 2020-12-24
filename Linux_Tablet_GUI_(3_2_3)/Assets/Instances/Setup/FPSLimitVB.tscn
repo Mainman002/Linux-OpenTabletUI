@@ -1,0 +1,153 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Buttons/SetupPanelBTN1_pressed.png" id=1]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Buttons/SetupPanelBTN1_hover.png" id=2]
+
+[ext_resource type="Texture" path="res://Assets/Sprites/Buttons/SetupPanelBTN1_normal.png" id=3]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/ResetAllButton1.gd" id=4]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/FPSLimit1.gd" id=5]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Buttons/ProfileListBox1.gd" id=6]
+
+
+[node  name="FPSLimitVB" type="VBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=2
+size_flags_vertical=3
+margin_left=0.0
+margin_top=327.0
+margin_right=141.0
+margin_bottom=591.0
+alignment=2
+
+[node  name="HSeparator" parent="." type="HSeparator"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=197.0
+margin_right=141.0
+margin_bottom=200.0
+
+[node  name="ResetSettings" parent="." type="TextureButton"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=204.0
+margin_right=141.0
+margin_bottom=236.0
+toggle_mode=false
+click_on_press=true
+enabled_focus_mode=0
+shortcut=null
+texture_normal=ExtResource(1)
+texture_pressed=ExtResource(2)
+texture_hover=ExtResource(3)
+params/resize_mode=0
+params/stretch_mode=0
+script=ExtResource(4)
+
+[node  name="Label" parent="ResetSettings" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=0
+margin_left=4.0
+margin_top=0.0
+margin_right=141.0
+margin_bottom=32.0
+text="Reset Settings"
+valign=1
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="FPSLimitHB" parent="." type="HBoxContainer"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=false
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=240.0
+margin_right=141.0
+margin_bottom=264.0
+alignment=0
+
+[node  name="Label" parent="FPSLimitHB" type="Label"]
+
+focus_ignore_mouse=true
+focus_stop_mouse=true
+size_flags_horizontal=3
+size_flags_vertical=2
+margin_left=0.0
+margin_top=0.0
+margin_right=72.0
+margin_bottom=24.0
+text="FPS Limit"
+valign=1
+percent_visible=1.0
+lines_skipped=0
+max_lines_visible=-1
+
+[node  name="VSeparator" parent="FPSLimitHB" type="VSeparator"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=76.0
+margin_top=0.0
+margin_right=79.0
+margin_bottom=24.0
+
+[node  name="LineEdit" parent="FPSLimitHB" type="LineEdit"]
+
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=83.0
+margin_top=0.0
+margin_right=141.0
+margin_bottom=24.0
+text="30"
+placeholder_alpha=0.6
+align=1
+max_length=2
+focus_mode=2
+caret_blink=false
+caret_blink_speed=0.65
+script=ExtResource(5)
+
+[node  name="OptionButton" parent="." type="OptionButton"]
+
+visible=false
+rect/min_size=Vector2( 0, 32 )
+focus_ignore_mouse=false
+focus_stop_mouse=true
+size_flags_horizontal=2
+size_flags_vertical=2
+margin_left=0.0
+margin_top=232.0
+margin_right=141.0
+margin_bottom=264.0
+toggle_mode=false
+enabled_focus_mode=0
+shortcut=null
+flat=false
+align=0
+selected=-1
+items=[  ]
+script=ExtResource(6)
