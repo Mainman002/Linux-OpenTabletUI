@@ -37,21 +37,6 @@ EndSection
 
 save and reboot, your huion tablet should now work
 
-[ Version Download Links ]
--
-
-[ Linux 32bit Export ]
--
-https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_32bit.zip
-
-[ Linux 64bit Export ]
--
-https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/raw/master/Linux%20APP%20Exports/Wacom_Gui_64bit.zip
-
-[ Godot_2x Project Files ]
--
- https://github.com/Mainman002/Wacom-Bamboo-Settings-Gui/blob/master/Project%20Files/Project%20Files.zip?raw=true
-
 [ Helpful Links ]
 -
 
