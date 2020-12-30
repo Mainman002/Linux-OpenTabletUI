@@ -1,5 +1,5 @@
 # OpenTabletUI 
-(A Godot app used to adjust graphics tablet settings in Linux using xsetwacom commands.)
+(A Godot app to adjust graphics tablet settings in Linux using xsetwacom commands.)
 
 ( Screenshots are at the bottom of this Readme file )
 
