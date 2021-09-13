@@ -16,7 +16,10 @@ https://downloads.tuxfamily.org/godotengine/2.1.3/
 
 [ Things To Install Before Running ]
 -
+
+```bash
 libwacom xf86-input-wacom 
+```
 
 (your wacom tablet should work without needing the extra steps bellow after restarting)
 
@@ -26,14 +29,20 @@ This Guide can help figuring out the proper line of code -> https://github.com/D
 
 open a terminal and run " lsusb " without quotes to get your tablets ID number then
 
-for huion tablets enter the next few lines of text here -> sudo gedit /etc/X11/xorg.conf.d/50-tablet.conf
+for huion tablets enter the next few lines of text here
 
+```bash
+sudo gedit /etc/X11/xorg.conf.d/50-tablet.conf
+```
+
+```bash
 Section "InputClass"
     Identifier "Tablet"
     Driver "wacom"
     MatchDevicePath "/dev/input/event*"
     MatchUSBID "<VID>:<PID>"
 EndSection
+```
 
 save and reboot, your huion tablet should now work
 
