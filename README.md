@@ -23,7 +23,11 @@ libwacom xf86-input-wacom
 
 (your wacom tablet should work without needing the extra steps bellow after restarting)
 
-(huion tablets will need these too " digimend-kernel-drivers-dkms-git and linux-headers ")
+(huion tablets will need these too
+
+```bash
+digimend-kernel-drivers-dkms-git and linux-headers
+```
 
 This Guide can help figuring out the proper line of code -> https://github.com/DIGImend/digimend-kernel-drivers
 
