@@ -24,8 +24,13 @@ PenPressureCurve = 0 0 100 100    ##(Pen Pressure Curve Lol)
 PenBtn1 = 3                       ##(Sets Button1 to Middle Click)
 PenBtn2 = 2                       ##(Sets Button2 to Right Click)
 
-[ Get Dual Monitor Info ]
+
+[ Get Full Monitors Info ]
 xrandr
+
+
+[ Get Simplified Monitors Info ]
+xrandr --listactivemonitors
 
 
 [ Get Tablet Devices ]
